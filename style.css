@@ -1,0 +1,36 @@
+:root {
+    /* Tema Claro por defecto */
+    --color-primary: #ffffff;
+    --color-secondary: #f3f4f6;
+    --color-border: #e5e7eb;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --color-accent: #8b5cf6; /* Morado por defecto */
+}
+
+.dark {
+    --color-primary: #111827;
+    --color-secondary: #1f2937;
+    --color-border: #374151;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Clases de utilidad para los temas */
+.bg-primary { background-color: var(--color-primary); }
+.bg-hover-color { background-color: var(--color-secondary); }
+.text-text-primary { color: var(--text-primary); }
+.text-text-secondary { color: var(--text-secondary); }
+.border-border-color { border-color: var(--color-border); }
+
+/* Clases para el color de acento */
+.text-accent-color { color: var(--color-accent); }
+.bg-accent-color { background-color: var(--color-accent); }
+.hover\:text-accent-color:hover { color: var(--color-accent); }
+.focus\:ring-accent-color:focus { --tw-ring-color: var(--color-accent); }

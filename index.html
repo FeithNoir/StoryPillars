@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Pillars</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tu archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-primary text-text-primary font-sans">
+
+    <div id="app-container" class="grid grid-cols-1 md:grid-cols-[300px_1fr] grid-rows-[auto_1fr_auto] h-screen">
+
+        <!-- ================= Header ================= -->
+        <header
+            class="header flex items-center justify-between p-4 border-b border-border-color col-span-1 md:col-span-2">
+            <h1 class="text-2xl font-bold">Story Pillars</h1>
+            <button id="theme-toggle" class="p-2 rounded-md hover:bg-hover-color" title="Cambiar Tema">
+                <svg id="theme-icon-sun" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <svg id="theme-icon-moon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- ================= Sidebar ================= -->
+        <aside id="sidebar" class="sidebar p-4 border-r border-border-color overflow-y-auto">
+            <h2 class="text-xl font-semibold border-b border-border-color pb-2">Opciones</h2>
+            <div class="mt-4 space-y-4">
+                <button id="write-btn"
+                    class="w-full p-2 rounded-md bg-accent-color text-white font-bold">Escribir</button>
+                <button id="view-btn" class="w-full p-2 rounded-md bg-hover-color">Visualizar</button>
+                <button id="save-btn" class="w-full p-2 rounded-md bg-hover-color">Guardar (JSON)</button>
+                <button id="load-btn" class="w-full p-2 rounded-md bg-hover-color">Cargar (JSON)</button>
+                <input type="file" id="file-input" class="hidden" accept=".json">
+            </div>
+        </aside>
+
+        <!-- ================= Content ================= -->
+        <main class="content p-4 md:p-8 overflow-y-auto">
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Sinopsis -->
+                <div>
+                    <h2 class="text-2xl font-bold text-accent-color mb-2">Sinopsis</h2>
+                    <div id="synopsis-container"></div>
+                </div>
+                <!-- Pilares Narrativos -->
+                <div>
+                    <h2 class="text-2xl font-bold text-accent-color mb-4">Pilares Narrativos</h2>
+                    <div id="pillars-container" class="space-y-6">
+                        <!-- Los pilares se generan dinámicamente aquí -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ================= Footer ================= -->
+        <footer
+            class="footer p-4 text-center text-sm text-text-secondary border-t border-border-color col-span-1 md:col-span-2">
+            <a href="https://github.com/FeithNoir" target="_blank" rel="noopener noreferrer"
+                class="hover:text-accent-color">
+                Desarrollado por Feith Noir
+            </a>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
