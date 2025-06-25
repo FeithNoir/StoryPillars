@@ -16,7 +16,6 @@ A minimalist web application designed to help writers, screenwriters, and storyt
 *   ✅ **Full Data Portability**: Save your entire story structure as a `.json` file to your local machine, and load it back into the app anytime.
 *   ✅ **Minimalist UI & Theming**: A clean, distraction-free interface with a beautiful dark mode enabled by default, and an easy toggle to switch to a light theme.
 *   ✅ **Responsive Design**: A fluid layout that works perfectly on desktops, tablets, and smartphones for writing on the go.
-*   ✅ **Example Data Included**: The app loads with a pre-filled example story to demonstrate its functionality right away.
 
 ## 🔮 Future Plans
 
